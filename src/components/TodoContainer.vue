@@ -110,7 +110,9 @@ h2{
   background: rgb(255, 199, 136);
 
   div {
-    width: 90vw;
+    width: 40rem;
+    max-width: 90vw;
+
   }
   input{
     border:none;
@@ -128,6 +130,7 @@ h2{
     background-color: #eb6b39;
     border: 0;
     border-radius: 3rem;
+    padding: 0.5rem 1rem;
 
     &:hover{
       background-color: #ec4e0f;
