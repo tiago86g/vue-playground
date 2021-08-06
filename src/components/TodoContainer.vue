@@ -62,7 +62,7 @@ export default {
           status: 'in progress',
         },
       ],
-    };
+    }
   },
 
   methods: {
@@ -71,31 +71,31 @@ export default {
         this.tasks.push({
           name: this.task,
           status: this.taskStatusList[0],
-        });
+        })
       } else {
-        this.tasks[this.editedTask].name = this.task;
-        this.editedTask = -1;
+        this.tasks[this.editedTask].name = this.task
+        this.editedTask = -1
       }
-      this.task = '';
+      this.task = ''
     },
 
     deleteTask(index) {
-      this.tasks.splice(index, 1);
+      this.tasks.splice(index, 1)
     },
 
     editTask(index) {
-      this.task = this.tasks[index].name;
-      this.editedTask = index;
+      this.task = this.tasks[index].name
+      this.editedTask = index
     },
 
     changeStatus(index) {
-      let newIndex = this.taskStatusList.indexOf(this.tasks[index].status);
+      let newIndex = this.taskStatusList.indexOf(this.tasks[index].status)
       // eslint-disable-next-line no-plusplus
-      if (++newIndex > 2) newIndex = 0;
-      this.tasks[index].status = this.taskStatusList[newIndex];
+      if (++newIndex > 2) newIndex = 0
+      this.tasks[index].status = this.taskStatusList[newIndex]
     },
   },
-};
+}
 </script>
 
 <style scoped lang="scss">

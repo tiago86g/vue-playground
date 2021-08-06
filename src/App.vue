@@ -1,8 +1,12 @@
+<script>
+</script>
+
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/todo">Todo list</router-link> |
-    <router-link to="/calculator">Calculator</router-link>
+    <router-link to="/calculator">Calculator</router-link> |
+    <router-link to="/olympics">Olympics</router-link>
   </div>
   <router-view/>
 </template>

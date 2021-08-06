@@ -29,23 +29,23 @@ export default {
       calculatorElements: ['C', '%', '/', '*', 7, 8, 9, '-', 4, 5, 6, '+', 1, 2, 3, '=', 0, '.'],
       operator: null,
       previousCalculatorValue: '',
-    };
+    }
   },
 
   methods: {
     action(n) {
       if (!Number.isNaN(n) || n === '.') {
-        this.calculatorValue += n.toString();
+        this.calculatorValue += n.toString()
       }
       if (n === 'C') {
-        this.calculatorValue = '';
+        this.calculatorValue = ''
       }
       if (n === '%') {
-        this.calculatorValue = `${this.calculatorValue.slice(0, -1) / 100}`;
+        this.calculatorValue = `${this.calculatorValue.slice(0, -1) / 100}`
       }
       if (['*', '/', '-', '+'].includes(n)) {
-        this.operator = n;
-        this.previousCalculatorValue = this.calculatorValue;
+        this.operator = n
+        this.previousCalculatorValue = this.calculatorValue
         // this.calculatorValue = '';
       }
       if (n === '=') {
@@ -55,14 +55,14 @@ export default {
           // this.previousCalculatorValue.slice(0, -1)
           // + this.operator
           // + this.calculatorValue.slice(0, -1),
-        );
-        this.previousCalculatorValue = '';
-        this.operator = null;
+        )
+        this.previousCalculatorValue = ''
+        this.operator = null
       }
     },
   },
 
-};
+}
 </script>
 
 <style scoped lang="scss">
